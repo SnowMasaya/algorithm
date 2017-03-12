@@ -104,3 +104,6 @@ Debug
 Debug/*
 .metadata/
 .metadata/*
+.settings
+.cproject
+.project
