@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;algorithm_study/execute&apos; to &apos;execute.cpp&apos;" description="Rename resource &apos;execute&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="execute" name="execute.cpp" stamp="1486073074529" updateReferences="true"/>
+</session>
