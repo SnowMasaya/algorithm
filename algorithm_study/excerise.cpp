@@ -41,12 +41,29 @@ Ps.: I was using gcc 4.9.2 and eclipse Luna (4.4.2), on ubuntu 15.04 64bits
  *
  */
 
-int main() {
+int main(int argc, char* argv[]){
+
+	unordered_map<char, int> uniq_char;
+
+	if (argc < 2){
+		cerr << "Usage: " << argv[0] << " input string" << endl;
+		return 1;
+	}
+
+	string word = argv[1];
+
+	for(auto it = word.begin(); it != word.end(); ++it){
+        uniq_char.insert({*it, 1});
+	}
+
+
+	/*
 	static int CALCULATE_LOW_VALUE =10;
 	static int CALCULATE_HIGH_VALUE =100;
 
 	std::unique_ptr<prime::prime> prime_instance(new prime::prime);
 	prime_instance->make_prime_number(CALCULATE_LOW_VALUE, CALCULATE_HIGH_VALUE);
+	*/
 	/* second
 	static int CALCULATE_VALUE =16;
 	std::unique_ptr<without_loop::without_loop> without_loop_instance(new without_loop::without_loop);

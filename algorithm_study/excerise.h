@@ -12,6 +12,7 @@
 #include "prime.h"
 #include<iostream>
 #include<memory>
+#include<unordered_map>
 using namespace std;
 
 class excerise {
