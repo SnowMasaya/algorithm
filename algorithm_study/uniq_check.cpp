@@ -5,7 +5,7 @@
  *      Author: masayaogushi
  */
 
-#include "uniqcheck.h"
+#include "uniq_check.h"
 
 namespace uniq_check {
 
@@ -38,6 +38,25 @@ void uniq_check::uniq_check_method(string word){
 	}
 
 }
+
+void uniq_check::uniq_check_method_answer(string word){
+	int checker = 0;
+	for (auto i =0; i < word.length(); i++){
+		int val = word.at(i) - 'a';
+		if ((checker & (1 << val)) > 0) {
+		    cerr << "No unique char: " << word[i] << endl;
+		}
+		checker |= (1 << val);
+		cout << "word: " << word.at(i) - 'a' << endl;
+		cout << "checker: " << checker << endl;
+		cout << "value: " << (1 << val) << endl;
+	}
+	for (auto i =0; i < word.length(); i++){
+		cout << "key: " << word[i] << endl;
+	}
+
+}
+
 
 } /* namespace uniq_check */
 

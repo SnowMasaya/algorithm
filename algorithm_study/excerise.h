@@ -10,6 +10,7 @@
 #include "simplerecurrence.h"
 #include "withoutloop.h"
 #include "prime.h"
+#include "uniq_check.h"
 #include<iostream>
 #include<memory>
 #include<unordered_map>

@@ -43,19 +43,15 @@ Ps.: I was using gcc 4.9.2 and eclipse Luna (4.4.2), on ubuntu 15.04 64bits
 
 int main(int argc, char* argv[]){
 
-	unordered_map<char, int> uniq_char;
-
 	if (argc < 2){
 		cerr << "Usage: " << argv[0] << " input string" << endl;
 		return 1;
 	}
 
 	string word = argv[1];
-
-	for(auto it = word.begin(); it != word.end(); ++it){
-        uniq_char.insert({*it, 1});
-	}
-
+	unique_ptr<uniq_check::uniq_check> uniq_check_instance(new uniq_check::uniq_check);
+    // uniq_check_instance->uniq_check_method(word);
+	uniq_check_instance->uniq_check_method_answer(word);
 
 	/*
 	static int CALCULATE_LOW_VALUE =10;

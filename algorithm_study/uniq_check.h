@@ -16,6 +16,7 @@ public:
 	uniq_check();
 	virtual ~uniq_check();
 	void uniq_check_method(string word);
+	void uniq_check_method_answer(string word);
 };
 
 } /* namespace uniq_check */
