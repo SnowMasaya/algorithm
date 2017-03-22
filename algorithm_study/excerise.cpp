@@ -44,14 +44,35 @@ Ps.: I was using gcc 4.9.2 and eclipse Luna (4.4.2), on ubuntu 15.04 64bits
 int main(int argc, char* argv[]){
 
 	if (argc < 2){
-		cerr << "Usage: " << argv[0] << " input string" << endl;
+		cerr << "Usage: " << argv[0] << " input string " << endl;
 		return 1;
 	}
+	/*
+	if (argc < 3){
+		cerr << "Usage: " << argv[0] << " input string " << argv[1] << " compare string" << endl;
+		return 1;
+	}
+	*/
 
+	/* problem 1.1
 	string word = argv[1];
 	unique_ptr<uniq_check::uniq_check> uniq_check_instance(new uniq_check::uniq_check);
     // uniq_check_instance->uniq_check_method(word);
 	uniq_check_instance->uniq_check_method_answer(word);
+	*/
+
+	/* problem 1.2
+	string word = argv[1];
+	string compare_word = argv[2];
+	unique_ptr<prime::reorder> reorder_instance(new prime::reorder);
+	// reorder_instance->reorder_method(word, compare_word);
+	reorder_instance->permutation(word, compare_word);
+	*/
+
+	// expect to input "hoge hoge"
+	string word = argv[1];
+	unique_ptr<prime::replace_space> replace_space_instance(new prime::replace_space);
+	replace_space_instance->replace_method(word);
 
 	/*
 	static int CALCULATE_LOW_VALUE =10;

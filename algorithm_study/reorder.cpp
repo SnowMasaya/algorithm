@@ -42,4 +42,22 @@ void reorder::reorder_method(string word, string compare_word){
 	}
 
 }
+
+bool reorder::permutation(string word, string compare_word){
+	if (word.length() != compare_word.length()){
+	    cerr << "Not Length match: " << word << " " << compare_word << endl;
+        return false;
+	}
+
+	sort(word.begin(), word.end());
+	sort(compare_word.begin(), compare_word.end());
+
+	if(word != compare_word){
+	    cerr << "Not match: " << word << " " << compare_word << endl;
+		return false;
+	}
+    cout << "Match: " << word << " " << compare_word << endl;
+	return true;
+}
+
 } /* namespace prime */
