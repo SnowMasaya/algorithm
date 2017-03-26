@@ -17,6 +17,7 @@
 #include<memory>
 #include<unordered_map>
 #include <algorithm>
+#include <cstdlib>
 using namespace std;
 
 class excerise {

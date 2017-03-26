@@ -16,6 +16,7 @@ public:
 	replace_space();
 	virtual ~replace_space();
 	void replace_method(string word);
+    void replace_method_answer(string word, int trueLength);
 };
 
 } /* namespace prime */

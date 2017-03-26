@@ -8,7 +8,6 @@
 #ifndef REORDER_H_
 #define REORDER_H_
 #include "excerise.h"
-#include <algorithm>
 
 namespace prime {
 
