@@ -13,6 +13,7 @@
 #include "uniq_check.h"
 #include "reorder.h"
 #include "replacespace.h"
+#include "palindrome.h"
 #include<iostream>
 #include<memory>
 #include<unordered_map>

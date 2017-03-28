@@ -70,11 +70,17 @@ int main(int argc, char* argv[]){
 	*/
 
 	// expect to input "hoge hoge"
+	/* problem 1.3
 	string word = argv[1];
 	int word_number = atoi(argv[2]);
 	unique_ptr<prime::replace_space> replace_space_instance(new prime::replace_space);
 	// replace_space_instance->replace_method(word);
 	replace_space_instance->replace_method_answer(word, word_number);
+	*/
+
+	string word = argv[1];
+	unique_ptr<palindrome::palindrome> palindrome_instance(new palindrome::palindrome);
+	palindrome_instance->palindrome_method(word);
 
 	/*
 	static int CALCULATE_LOW_VALUE =10;
