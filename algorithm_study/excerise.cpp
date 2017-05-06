@@ -49,7 +49,7 @@ int main(int argc, char* argv[]){
 	}
 	/*
 	if (argc < 3){
-		cerr << "Usage: " << argv[0] << " input string " << argv[1] << " compare string" << endl;
+		cerr << "Usage: " << argv[0] << " input string " << argv[1] << " compare string " << argv[2] << endl;
 		return 1;
 	}
 	*/
@@ -78,9 +78,23 @@ int main(int argc, char* argv[]){
 	replace_space_instance->replace_method_answer(word, word_number);
 	*/
 
+	/* problem 1.4
 	string word = argv[1];
 	unique_ptr<palindrome::palindrome> palindrome_instance(new palindrome::palindrome);
 	palindrome_instance->palindrome_method(word);
+	*/
+
+	/* problem 1.5
+	string original_word = argv[1];
+	string compare_word = argv[2];
+	unique_ptr<replace_word::replace_word> replace_word_instance(new replace_word::replace_word);
+	// replace_word_instance->replace_word_method(original_word, compare_word);
+	replace_word_instance->replace_word_method_answer(original_word, compare_word);
+	*/
+
+	string word = argv[1];
+	unique_ptr<compress_word::compress_word> compress_instance(new compress_word::compress_word);
+	compress_instance->compress_method(word);
 
 	/*
 	static int CALCULATE_LOW_VALUE =10;

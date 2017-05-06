@@ -33,12 +33,12 @@ void replace_word::replace_word_method(string original_word, string compare_word
 		upper_flag = true;
 	}
 
-	if (original_word.length() + 2 < compare_word.length()){
+	if (original_word.length() + 2 <= compare_word.length()){
 	    cerr << "*NG* Compare original and compare " << original_word << " " << compare_word << endl;
         return ;
 	}
 
-	if (original_word.length() -2 > compare_word.length()){
+	if (original_word.length() -2 >= compare_word.length()){
 	    cerr << "*NG* Compare original and compare " << original_word << " " << compare_word << endl;
         return ;
 	}
@@ -51,6 +51,7 @@ void replace_word::replace_word_method(string original_word, string compare_word
 	}
 
 	int not_same_word_number = 0;
+	int word_twice_check = 0;
 	for(auto it = compare_word.begin(); it != compare_word.end(); it++){
 		auto same_char = original_word_hash.find(*it);
 		if (same_char == original_word_hash.end()){
@@ -74,5 +75,34 @@ void replace_word::replace_word_method(string original_word, string compare_word
 
 	}
 
+}
+
+bool replace_word::replace_word_method_answer(string original_word, string compare_word){
+
+	if(abs(original_word.length() - compare_word.length())){
+		return false;
+	}
+
+	string s1 = original_word.length() < compare_word.length() ? original_word: compare_word;
+	string s2 = original_word.length() < compare_word.length() ? compare_word: original_word;
+
+	int index1 = 0;
+	int index2 = 0;
+	bool foundDifference = false;
+	while (index2 < compare_word.length() && index1 < original_word.length()){
+		if(s1[index1] != s2[index2]){
+			if (foundDifference) {
+				return false;
+			}
+			foundDifference = true;
+			if(original_word.length() == compare_word.length()){
+				index1++;
+			}
+		} else {
+			index1++;
+		}
+		index2++;
+	}
+    return true;
 }
 } /* namespace replace_word */

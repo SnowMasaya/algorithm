@@ -8,6 +8,7 @@
 #ifndef REPLACEWORD_H_
 #define REPLACEWORD_H_
 #include "excerise.h"
+#include <cmath>
 
 namespace replace_word {
 
@@ -16,6 +17,7 @@ public:
 	replace_word();
 	virtual ~replace_word();
     void replace_word_method(string original_word, string compare_word);
+    bool replace_word_method_answer(string original_word, string compare_word);
 };
 
 } /* namespace replace_word */

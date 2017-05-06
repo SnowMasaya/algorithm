@@ -14,6 +14,8 @@
 #include "reorder.h"
 #include "replacespace.h"
 #include "palindrome.h"
+#include "replaceword.h"
+#include "compress_word.h"
 #include<iostream>
 #include<memory>
 #include<unordered_map>
