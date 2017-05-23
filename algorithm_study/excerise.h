@@ -16,6 +16,7 @@
 #include "palindrome.h"
 #include "replaceword.h"
 #include "compress_word.h"
+#include "rotation.h"
 #include<iostream>
 #include<memory>
 #include<unordered_map>

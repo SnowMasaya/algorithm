@@ -16,6 +16,7 @@ public:
 	compress_word();
 	virtual ~compress_word();
 	string compress_method(string word);
+	string compress_method_answer(string word);
 };
 
 } /* namespace replace_word */

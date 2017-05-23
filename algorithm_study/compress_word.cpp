@@ -7,6 +7,31 @@
 
 #include "compress_word.h"
 
+class StringBuilder{
+private:
+	string main;
+	string scratch;
+
+	const string::size_type ScratchSize = 1024;
+public:
+	StringBuilder & append(const string & str) {
+		scratch.append(str);
+		if(scratch.length() > ScratchSize){
+			main.append(scratch);
+			scratch.resize(0);
+		}
+		return *this;
+	}
+
+	const string & str() {
+		if (scratch.size() > 0){
+			main.append(scratch);
+			scratch.resize(0);
+		}
+		return main;
+	}
+};
+
 namespace compress_word {
 
 compress_word::compress_word() {
@@ -37,5 +62,43 @@ string compress_word::compress_method(string word){
 	}
 
 }
+
+int countCompression(string word){
+
+	int compressedLength = 0;
+	int countConsecutive = 0;
+	for(int i = 0; i < word.length(); i++){
+		countConsecutive++;
+
+		if(i + 1 >= word.length() || word[i] != word[i + 1]){
+			compressedLength += 1 + countConsecutive;
+			countConsecutive = 0;
+		}
+	}
+	return compressedLength;
+}
+
+string compress_word::compress_method_answer(string word){
+
+	int finalLength = countCompression(word);
+	if(finalLength >= word.length()){
+		return word;
+	}
+
+	StringBuilder compressed = new StringBuilder(finalLength);
+	int countConsecutive = 0;
+	for(int i = 0; i < word.length(); i++){
+		countConsecutive++;
+
+		if(i + 1 >= word.length() || word[i] != word[i + 1]){
+			compressed.append(word[i]);
+			compressed.append(countConsecutive);
+			countConsecutive = 0;
+		}
+	}
+
+
+}
+
 
 } /* namespace replace_word */

@@ -92,9 +92,15 @@ int main(int argc, char* argv[]){
 	replace_word_instance->replace_word_method_answer(original_word, compare_word);
 	*/
 
+	/* problem 1.5
 	string word = argv[1];
 	unique_ptr<compress_word::compress_word> compress_instance(new compress_word::compress_word);
 	compress_instance->compress_method(word);
+	*/
+
+	int size = argv[1];
+	unique_ptr<rotation::rotation> rotation_instance(new rotation::rotation);
+	rotation_instance->rotation_method();
 
 	/*
 	static int CALCULATE_LOW_VALUE =10;
