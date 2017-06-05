@@ -85,6 +85,7 @@ string compress_word::compress_method_answer(string word){
 		return word;
 	}
 
+	/*
 	StringBuilder compressed = new StringBuilder(finalLength);
 	int countConsecutive = 0;
 	for(int i = 0; i < word.length(); i++){
@@ -96,6 +97,7 @@ string compress_word::compress_method_answer(string word){
 			countConsecutive = 0;
 		}
 	}
+	*/
 
 
 }

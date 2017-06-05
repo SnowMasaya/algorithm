@@ -98,9 +98,11 @@ int main(int argc, char* argv[]){
 	compress_instance->compress_method(word);
 	*/
 
+	/* problem 1.6
 	int size = argv[1];
 	unique_ptr<rotation::rotation> rotation_instance(new rotation::rotation);
 	rotation_instance->rotation_method();
+	*/
 
 	/*
 	static int CALCULATE_LOW_VALUE =10;

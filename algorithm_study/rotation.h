@@ -15,7 +15,7 @@ class rotation {
 public:
 	rotation();
 	virtual ~rotation();
-	bool rotation_method(int x[][]);
+    //bool rotation_method(int matrix[][]);
 };
 
 } /* namespace replace_word */

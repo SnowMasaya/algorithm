@@ -18,6 +18,7 @@ rotation::~rotation() {
 	// TODO Auto-generated destructor stub
 }
 
+/*
 bool rotation::rotation_method(int matrix[][]){
 
 	int size_col = sizeof(matrix) / sizeof(matrix[0]);
@@ -53,4 +54,5 @@ bool rotation::rotation_method(int matrix[][]){
 
 	return true;
 }
+*/
 } /* namespace replace_word */
