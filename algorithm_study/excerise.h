@@ -16,6 +16,7 @@
 #include "palindrome.h"
 #include "replaceword.h"
 #include "compress_word.h"
+#include "linkedlistduplicateremove.h"
 // #include "rotation.h"
 #include<iostream>
 #include<memory>

@@ -104,6 +104,13 @@ int main(int argc, char* argv[]){
 	rotation_instance->rotation_method();
 	*/
 
+	/* problem 2.1 */
+	unique_ptr<linked_list_duplicate_remove::node> root(new linked_list_duplicate_remove::node);
+	root->data = 10;
+	linked_list_duplicate_remove::node *conductor;
+    conductor->data = 20;
+    root->next = conductor;
+
 	/*
 	static int CALCULATE_LOW_VALUE =10;
 	static int CALCULATE_HIGH_VALUE =100;

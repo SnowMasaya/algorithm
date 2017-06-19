@@ -18,5 +18,8 @@ linked_list_duplicate_remove::~linked_list_duplicate_remove() {
 	// TODO Auto-generated destructor stub
 }
 
+void linked_list_duplicate_remove::deleteDups(node){
+
+}
 
 } /* namespace all_zero */
